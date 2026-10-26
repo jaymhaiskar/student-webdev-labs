@@ -1,11 +1,130 @@
+
+<!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Layout Exercise 02 - Flexbox</title>
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1>Simple Game Showcase</h1>
-  </body>
+</head>
+
+<body class="flex-page">
+
+    <header class="showcase-header">
+        <h1>Simple Game Showcase</h1>
+
+        <nav class="showcase-nav">
+            <a href="#dino">Dino Game</a>
+            <a href="#goose">Untitled Goose Game</a>
+            <a href="#flappy">Flappy Bird</a>
+        </nav>
+    </header>
+
+    <main class="showcase-content">
+
+        <!-- Chrome Dino Game -->
+        <section class="game-section" id="dino">
+            <div class="game-description">
+                <h2>Chrome Dino Game</h2>
+
+                <p>
+                    The Chrome Dino Game was released in 2014
+                    by Google. It appears when users lose
+                    internet connection in the Chrome browser.
+                    Players control a small dinosaur that runs
+                    endlessly, jumping over obstacles like
+                    cacti and dodging flying enemies.
+                </p>
+
+                <p>
+                    Many people describe the game as simple
+                    but addictive. It has become an iconic
+                    offline pastime.
+                </p>
+            </div>
+
+            <figure>
+                <img
+                    src="https://static.wixstatic.com/media/d38898_a34eeb816c894dc98bc9bb05944d65a8~mv2.png/v1/fill/w_980,h_618,al_c,q_90/d38898_a34eeb816c894dc98bc9bb05944d65a8~mv2.png"
+                    alt="Chrome Dino running through the desert"
+                    width="180"
+                />
+                <figcaption>
+                    The Chrome Dino running through the desert.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Untitled Goose Game -->
+        <section class="game-section" id="goose">
+            <div class="game-description">
+                <h2>Untitled Goose Game</h2>
+
+                <p>
+                    Untitled Goose Game was released in 2019
+                    by House House. It is a puzzle-stealth game
+                    where players control a mischievous goose
+                    causing chaos in a quiet village.
+                </p>
+
+                <p>
+                    The game received widespread praise for
+                    its humor, unique concept, and charming
+                    design. Players especially enjoyed the
+                    freedom to annoy villagers in creative ways.
+                </p>
+            </div>
+
+            <figure>
+                <img
+                    src="https://gfn.ru/media/images/art_image-untitled-goose-game-a5df5e60.original.jpg"
+                    alt="Untitled Goose Game official cover art"
+                    width="180"
+                />
+                <figcaption>
+                    The mischievous goose causing trouble.
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Flappy Bird -->
+        <section class="game-section" id="flappy">
+            <div class="game-description">
+                <h2>Flappy Bird</h2>
+
+                <p>
+                    Flappy Bird was released in 2013 by
+                    Dong Nguyen. It is a mobile game where
+                    players tap the screen to keep a bird
+                    flying between pipes without hitting them.
+                </p>
+
+                <p>
+                    The game became extremely popular for its
+                    difficulty and simplicity. Many players
+                    found it frustrating yet addictive,
+                    leading to viral success before it was
+                    eventually removed.
+                </p>
+            </div>
+
+            <figure>
+                <img
+                    src="https://sc.filehippo.net/images/t_app-icon-l/p/6bf07ef0-9b29-11e6-93d4-00163ed833e7/1216681277/flappy-bird-icon.png"
+                    alt="Flappy Bird yellow pixelated bird on green background"
+                    width="180"
+                />
+                <figcaption>
+                    The iconic Flappy Bird navigating pipes.
+                </figcaption>
+            </figure>
+        </section>
+
+    </main>
+
+    <footer class="showcase-footer">
+        &copy; 2026 Simple Game Showcase
+    </footer>
+
+</body>
 </html>
