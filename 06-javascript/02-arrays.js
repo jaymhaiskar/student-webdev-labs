@@ -22,7 +22,9 @@ const pokemons = [
 ];
 
 // Add your code here for: forEachPokemon
-
+const forEachPokemon = function logPokemons() {
+  pokemons.forEach(pokemon => console.log(`#${pokemon.id} ${pokemon.name} - ${pokemon.types.join(' / ')}`));
+}
 console.group('=========== forEachPokemon =========== ');
 console.log(forEachPokemon());
 // #1 Bulbasaur - Grass / Poison
@@ -48,6 +50,9 @@ console.log(forEachPokemon());
 console.groupEnd();
 
 // Add your code here for: filterPokemons
+const filterPokemons = function logFilteredPokemons(type){
+    return pokemons.filter(pokemon => pokemon.types.includes(type)).map(pokemon => pokemon.name);
+}
 
 console.group('=========== filterPokemons =========== ');
 console.log(filterPokemons('Fire'));
@@ -59,7 +64,10 @@ console.log(filterPokemons('Poison'));
 console.groupEnd();
 
 // Add your code here for: searchPokemons
-
+const searchPokemons = function logSearchedPokemons(searchTerm) {
+  const lowerCaseSearchTerm = searchTerm.toLowerCase();
+  return pokemons.filter(pokemon => pokemon.name.toLowerCase() === lowerCaseSearchTerm || pokemon.types.some(type => type.toLowerCase() === lowerCaseSearchTerm));
+}
 console.group('=========== searchPokemons =========== ');
 console.log(searchPokemons('Wartortle'));
 // [ { id: 8, name: 'Wartortle', types: [ 'Water' ] } ]
@@ -77,9 +85,17 @@ console.log(searchPokemons('bug'));
 console.groupEnd();
 
 // Add your code here for: reducePokemons
+const reducePokemons = function logReducedPokemons() {
+  return pokemons.reduce((acc, pokemon) => {
+    pokemon.types.forEach(type => {
+      acc[type] = (acc[type] || 0) + 1;
+    });
+    return acc;
+  }, {});
+}
 
 console.group('=========== reducePokemons =========== ');
-console.log(reducePokemons);
+console.log(reducePokemons());
 // {
 //   Grass: 3,
 //   Poison: 6,

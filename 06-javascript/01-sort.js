@@ -24,6 +24,18 @@ const pokemons = [
 const sortPokemons = function logSortedPokemons(sortType) {
   const sortedPokemons = [];
   // Add your code here
+  console.log(sortType);
+  if ((sortType === 'numerically, in ascending order')) {
+    sortedPokemons.push(pokemons.sort((a, b) => a.id - b.id));
+  } else if (sortType === 'numerically, in descending order') {
+    sortedPokemons.push(pokemons.sort((a,b) => b.id - a.id));
+  } else if (sortType === 'alphabetically, in ascending order') {
+    sortedPokemons.push(pokemons.sort((a, b) => a.name.localeCompare(b.name)));
+  } else if (sortType === 'alphabetically, in descending order') {
+    sortedPokemons.push(pokemons.sort((a, b) => b.name.localeCompare(a.name)));
+  } else {
+    console.log('Invalid sort type');
+  }
 
   return sortedPokemons;
 };
@@ -32,3 +44,4 @@ console.log(sortPokemons('numerically, in ascending order'));
 console.log(sortPokemons('numerically, in descending order'));
 console.log(sortPokemons('alphabetically, in ascending order'));
 console.log(sortPokemons('alphabetically, in descending order'));
+
